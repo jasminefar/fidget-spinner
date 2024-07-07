@@ -1,0 +1,83 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+
+.spinner {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background-color: #333;
+  border-radius: 50%;
+  overflow: hidden;
+  animation: spin 4s infinite linear;
+}
+
+.blade {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 10px;
+  height: 100px;
+  background-color: #fff;
+  transform-origin: bottom;
+  animation: blade-spin 1s infinite linear;
+}
+
+.blade1 {
+  transform: rotate(0deg);
+}
+
+.blade2 {
+  transform: rotate(120deg);
+}
+
+.blade3 {
+  transform: rotate(240deg);
+}
+
+.center-piece {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.controls {
+  margin-top: 20px;
+  text-align: center;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes blade-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
